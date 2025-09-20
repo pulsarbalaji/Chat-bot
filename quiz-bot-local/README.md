@@ -17,3 +17,47 @@ Steps to run the project without Docker
 3. Install and run redis, and update the `CHANNEL_LAYERS` config in `settings.py`, if required.
 4. In the project root run `python manage.py runserver`
 4. Go to `127.0.0.1:8000` to view the chatbot
+
+
+
+#vijay balaji Arumugam 
+#setup of project
+1. clone repo
+https://github.com/pulsarbalaji/Chat-bot.git
+
+cd Chat-bot
+
+2. Create Venv(Virtual Environment)
+
+python -m venv venv
+
+activate - venv\script\activate
+
+3. Install Dependencies
+
+pip install -r requirements.txt
+
+4. DB setup and create .env
+
+DB_NAME=postgres
+DB_USER=postgres
+DB_PASSWORD=password
+DB_HOST=localhost
+DB_PORT=5432
+
+put in bash python manage.py migrate
+
+5. start and run local 
+
+python manage.py runserver
+
+6. Visit:
+
+http://127.0.0.1:8000/quiz?msg=
+ → first request shows welcome + Q1
+
+http://127.0.0.1:8000/quiz?msg=7
+ → example response
+
+
+
